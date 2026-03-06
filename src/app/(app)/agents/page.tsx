@@ -251,7 +251,6 @@ export default function AgentRegistryPage() {
                   <React.Fragment key={agent.id}>
                     <TableRow
                       className="cursor-pointer hover:bg-[color:var(--surface-hover)] transition-colors"
-                      className="cursor-pointer hover:bg-[color:var(--surface-hover)] transition-colors"
                       onClick={() =>
                         setExpandedId(expandedId === agent.id ? null : agent.id)
                       }
@@ -296,7 +295,7 @@ export default function AgentRegistryPage() {
                       </TableCell>
                     </TableRow>
                     {expandedId === agent.id && (
-                      <TableRow key={`${agent.id}-expanded`}>
+                      <TableRow>
                         <TableCell
                           colSpan={7}
                           className="bg-[color:var(--surface-active)]/60 border-y border-border/40"
@@ -346,7 +345,7 @@ export default function AgentRegistryPage() {
                         </TableCell>
                       </TableRow>
                     )}
-                  </>
+                  </React.Fragment>
                 ))
               )}
             </TableBody>
